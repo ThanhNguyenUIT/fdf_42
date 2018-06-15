@@ -1,0 +1,20 @@
+name:
+  length:
+    maximum: 50
+email:
+  length:
+    maximum: 255
+gravatar:
+  size:
+    default: 80
+    small: 50
+    tiny: 30
+password:
+  length:
+    minimum: 6
+password_reset_expired: 2
+picture:
+  size:
+    maximum: 5
+remember_me:
+  checked: "1"
