@@ -5,6 +5,11 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  has_many :orders, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :suggests, dependent: :destroy
+
   validates :email, presence: true, length: {maximum: Settings.email.length.maximum},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :name, presence: true, length: {maximum: Settings.name.length.maximum}
