@@ -1,0 +1,163 @@
+en:
+  account_activations:
+    activated: "Account activated!"
+    invalid_link: "Invalid activation link"
+    activation: "Account activation"
+  layouts:
+    header:
+      account: "Account %{bold_tag}"
+      help: "Help"
+      home: "Home"
+      login: "Log in"
+      logout: "Log out"
+      profile: "Profile"
+      sample_app: "Sample App"
+      settings: "Settings"
+      users: "Users"
+    footer:
+      the: "The"
+      ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
+      by: "by"
+      michael_hartl: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      link_to_home: "http://www.railstutorial.org/"
+      link_to_michael: "http://www.michaelhartl.com/"
+      link_to_news: "http://news.railstutorial.org/"
+    application:
+      base_title: "Ruby on Rails Tutorial Sample App"
+      welcome: "Welcome to the Sample App!"
+  max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
+  password_resets:
+    couldnt_found: "Couldn't found User with Email: %{email}"
+    create:
+      email_not_found: "Email address not found"
+      email_sent: "Email sent with password reset instructions"
+    edit:
+      confirmation: "Confirmation"
+      password: "Password"
+      reset_password: "Reset password"
+      update_password: "Update password"
+    new:
+      email: "Email"
+      forgot_password: "Forgot password"
+      submit: "Submit"
+    password_reset: "Password reset"
+    password_reset_expired: "Password reset has expired."
+    update:
+      cant_empty: "can't be empty"
+      password_reseted: "Password has been reset."
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      forgot_password: "(forgot password)"
+      invalid_email_password: "Invalid email/password combination"
+      login: "Log in"
+      new_user: "New user?"
+      signup_now: "Sign up now!"
+      remember_me: "Remember me on this computer"
+      not_activated: "Account not activated. Check your email for the activation link."
+  shared:
+    error_messages:
+      error: "error"
+      the_form_contains: "The form contains %{error}"
+      couldnt_found: "Couldn't found User"
+      delete_failed: "Failed to delete user"
+    home:
+      welcome: "Welcome to the Sample App"
+      ruby_on_rails: "Ruby on Rails"
+      ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
+      title: "Home"
+      sample_app: "Sample App"
+      this_is_the_home_page: "This is the home page for the"
+      sample_application: "sample application."
+      link_to_home: "http://www.railstutorial.org/"
+      signup_now: "Sign up now!"
+      link_to_rails: "http://rubyonrails.org/"
+      rails_logo: "Rails logo"
+    user_info:
+      view_my_profile : "view my profile"
+  static_pages:
+    home:
+      welcome: "Welcome to the Sample App"
+      ruby_on_rails: "Ruby on Rails"
+      ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
+      title: "Home"
+      sample_app: "Sample App"
+      this_is_the_home_page: "This is the home page for the"
+      sample_application: "sample application."
+      link_to_home: "http://www.railstutorial.org/"
+      signup_now: "Sign up now!"
+      link_to_rails: "http://rubyonrails.org/"
+      rails_logo: "Rails logo"
+    help:
+      title: "Help"
+      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      rails_tutorial_help_section: "Rails Tutorial help section"
+      to_get_help: "To get help on this sample app, see the"
+      ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
+      book: "book"
+      ruby_on_rails_tutorial_book: "Ruby on Rails Tutorial book"
+      link_to_help: "http://www.railstutorial.org/help"
+      link_to_book: "http://www.railstutorial.org/book"
+    about:
+      ruby_on_rails: "Ruby on Rails"
+      ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
+      book: "book"
+      and: "and"
+      the: "The"
+      is_a: "is a"
+      title: "About"
+      screencast: "screencast series"
+      to_teach: "to teach web development with"
+      this_is_the_sample_app: "This is the sample application for the tutorial."
+      link_to_about: "http://www.railstutorial.org/about"
+      link_to_screencast: "http://screencasts.railstutorial.org/"
+      link_to_home: "http://www.railstutorial.org/"
+      link_to_book: "http://www.railstutorial.org/book"
+    contact:
+      title: "Contact"
+      contact_the_ruby_on_rails: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      contact_page: "contact page"
+      link_to_contact: "http://www.railstutorial.org/contact"
+  user_mailer:
+    account_activation:
+      sample_app: "Sample App"
+      hi: "Hi %{user_name}"
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      if_you_didnt: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+      password_reset: "Password reset"
+      reset_password: "Reset password"
+      this_link_expire: "This link will expire in two hours."
+      to_reset_password: "To reset your password click the link below:"
+  users:
+    form:
+      submit: "Submit"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
+      address: "Address"
+      city: "City"
+      phone: "Phone"
+    edit:
+      change: "change"
+      edit_user: "Edit user"
+      profile_updated: "Profile updated"
+      update_profile: "Update your profile"
+    index:
+      all_users: "All users"
+      user_delete: "User deleted"
+    new:
+      signup: "Sign up"
+      this_will_be_signup: "This will be a signup page for new users."
+      please_log_in: "Please log in."
+      check_email: "Please check your email to activate your account."
+    user:
+      delete: "delete"
+      you_sure: "You sure?"

@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <%= render "shared/user_home" %>
+<% else %>
+  <%= render "shared/home" %>
+<% end %>
