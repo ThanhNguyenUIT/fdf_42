@@ -1,0 +1,15 @@
+<h1 class="jumbotron"><%= @product.name.capitalize %></h1>
+<div class="container">
+  <div class="card">
+    <div class="card_image">
+      <%= image_tag @product.images.first.link, alt: @product.name if @product.images.present? %>
+    </div>
+    <div class="card_body">
+      <p><%= @product.information %></p>
+      <p><small><%= t ".price" %></small> <%= number_to_currency @product.price %></p>
+    </div>
+    <div class="card_footer">
+      <%= link_to t(".back_home"), products_path %>
+    </div>
+  </div>
+</div>
