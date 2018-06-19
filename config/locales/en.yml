@@ -1,4 +1,12 @@
 en:
+  number:
+  currency:
+    format:
+      unit: "$"
+      delimiter: ","
+      separator: "."
+      precision: 3
+      format: "%n%u"
   account_activations:
     activated: "Account activated!"
     invalid_link: "Invalid activation link"
@@ -6,6 +14,7 @@ en:
   layouts:
     header:
       account: "Account %{bold_tag}"
+      category: "Category"
       help: "Help"
       home: "Home"
       login: "Log in"
@@ -26,8 +35,11 @@ en:
       link_to_michael: "http://www.michaelhartl.com/"
       link_to_news: "http://news.railstutorial.org/"
     application:
-      base_title: "Ruby on Rails Tutorial Sample App"
-      welcome: "Welcome to the Sample App!"
+      base_title: "Food and Drink App"
+      welcome: "Welcome to Food and Drink Store!"
+  categories:
+    show:
+      couldnt_found: "Category not exist!"
   max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
   password_resets:
     couldnt_found: "Couldn't found User with Email: %{email}"
@@ -48,6 +60,13 @@ en:
     update:
       cant_empty: "can't be empty"
       password_reseted: "Password has been reset."
+  products:
+    index:
+      welcome: "Welcome to Food and Drink Store!"
+    show:
+      price: "Price:"
+      couldnt_found: "Product not exist!"
+      back_home: "Back to Product List"
   sessions:
     new:
       email: "Email"
@@ -77,6 +96,9 @@ en:
       signup_now: "Sign up now!"
       link_to_rails: "http://rubyonrails.org/"
       rails_logo: "Rails logo"
+    product:
+      price: "Price:"
+      view_product: "View product"
     user_info:
       view_my_profile : "view my profile"
   static_pages:

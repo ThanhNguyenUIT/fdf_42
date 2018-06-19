@@ -3,7 +3,13 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
+  before_action :load_categories
+
   private
+
+  def load_categories
+    @categories = Category.all
+  end
 
   def logged_in_user
     return if logged_in?

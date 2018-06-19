@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
+  root "products#index"
 
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :users, except: :index
   resources :account_activations, only: :edit
   resources :password_resets, except: %i(index show destroy)
+  resources :products, only: %i(index show)
+  resources :categories, only: :show
 end

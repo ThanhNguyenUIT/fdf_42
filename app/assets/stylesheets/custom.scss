@@ -205,3 +205,14 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+/* Card */
+.card {
+  .card_title {
+    font-size: 18px;
+    color: grey;
+  }
+  .card_image {
+    border: 1px solid;
+  }
+}

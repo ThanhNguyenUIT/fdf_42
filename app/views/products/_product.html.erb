@@ -1,0 +1,16 @@
+<div class="card col-md-4">
+  <div class="card_body">
+    <div class="card_title text-center">
+      <p><%= product.name %></p>
+    </div>
+    <div class="card_image">
+      <%= image_tag product.images.first.link, alt: product.name if product.images.present? %>
+    </div>
+    <div class="card_text">
+      <p><small><%= t ".price" %></small> <%= number_to_currency product.price %></p>
+    </div>
+    <div class="card_footer">
+      <%= link_to t(".view_product"), product %>
+    </div>
+  </div>
+</div>
