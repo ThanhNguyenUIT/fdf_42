@@ -1,5 +1,11 @@
-<% if logged_in? %>
-  <%= render "shared/user_home" %>
-<% else %>
-  <%= render "shared/home" %>
-<% end %>
+<% provide :title, t(".title") %>
+<div class="container">
+  <div class="row">
+    <div class="center jumbotron">
+      <h1><%= t ".welcome" %></h1>
+    </div>
+    <div id="products">
+      <%= render @products %>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    @products = Product.load_product
+  end
 
   def help; end
 

@@ -11,6 +11,8 @@ en:
     activated: "Account activated!"
     invalid_link: "Invalid activation link"
     activation: "Account activation"
+  carts:
+    couldnt_found: "Cart not exist"
   layouts:
     header:
       account: "Account %{bold_tag}"
@@ -61,6 +63,8 @@ en:
       cant_empty: "can't be empty"
       password_reseted: "Password has been reset."
   products:
+    product:
+      add_cart: "Add to card"
     index:
       welcome: "Welcome to Food and Drink Store!"
     show:
@@ -85,7 +89,7 @@ en:
       couldnt_found: "Couldn't found User"
       delete_failed: "Failed to delete user"
     home:
-      welcome: "Welcome to the Sample App"
+      welcome: "Welcome to the Food And Drink Store!"
       ruby_on_rails: "Ruby on Rails"
       ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
       title: "Home"
@@ -103,7 +107,7 @@ en:
       view_my_profile : "view my profile"
   static_pages:
     home:
-      welcome: "Welcome to the Sample App"
+      welcome: "Welcome to the Food And Drink Store!"
       ruby_on_rails: "Ruby on Rails"
       ruby_on_rails_tutorial: "Ruby on Rails Tutorial"
       title: "Home"

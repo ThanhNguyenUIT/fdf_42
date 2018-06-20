@@ -9,6 +9,8 @@
     <div class="card_text">
       <p><small><%= t ".price" %></small> <%= number_to_currency product.price %></p>
     </div>
+    <p><%= link_to t(".add_cart"), add_cart_path(product), remote: true,
+      method: :get, class: "btn btn-success" %></p>
     <div class="card_footer">
       <%= link_to t(".view_product"), product %>
     </div>

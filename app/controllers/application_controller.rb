@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include CartsHelper
 
   before_action :load_categories
 
