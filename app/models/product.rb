@@ -6,4 +6,5 @@ class Product < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :images, dependent: :destroy
+  scope :load_product, ->{where "quantity > ?", Settings.quantity.zero}
 end

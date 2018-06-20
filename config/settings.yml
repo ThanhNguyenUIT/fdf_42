@@ -18,3 +18,6 @@ picture:
     maximum: 5
 remember_me:
   checked: "1"
+quantity:
+  zero: 0
+  one: 1

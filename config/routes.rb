@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "products#index"
+  root "static_pages#home"
 
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :password_resets, except: %i(index show destroy)
   resources :products, only: %i(index show)
   resources :categories, only: :show
+
+  get "add_cart/:product_id", to: "carts#add_cart", as: :add_cart
 end
