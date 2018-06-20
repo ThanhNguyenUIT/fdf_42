@@ -1,0 +1,2 @@
+$('#item_<%= @product.id %>>td.subtotal').html(
+  '<%= number_to_currency (@product.price * @product.quantity_in_cart) %>');

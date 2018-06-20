@@ -4,7 +4,7 @@
       <p><%= product.name %></p>
     </div>
     <div class="card_image">
-      <%= image_tag product.images.first.link, alt: product.name if product.images.present? %>
+      <%= show_product_image product %>
     </div>
     <div class="card_text">
       <p><small><%= t ".price" %></small> <%= number_to_currency product.price %></p>

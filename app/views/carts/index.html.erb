@@ -1,0 +1,36 @@
+<table id="cart" class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th><%= t ".product" %></th>
+      <th><%= t ".price" %></th>
+      <th><%= t ".quantity" %></th>
+      <th><%= t ".subtotal" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "cart_item", collection: @products_in_cart, as: :product %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>
+        <%= link_to root_path, class: "btn btn-warning" do %>
+          <i class="glyphicon glyphicon-arrow-left"></i>&nbsp;<%= t ".continue" %>
+        <% end %>
+      </td>
+      <td colspan="2"></td>
+      <td class="total_price">
+        <div><%= t ".total" %></div>
+        <div id="total"><%= number_to_currency sum_total_price %></div>
+      </td>
+      <td>
+        <% unless is_empty_cart? %>
+          <%= link_to "#", class: "btn btn-success" do %>
+            <%= t ".checkout" %>&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+<%= javascript_include_tag "cart" %>
