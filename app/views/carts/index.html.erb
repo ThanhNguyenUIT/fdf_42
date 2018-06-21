@@ -25,7 +25,7 @@
       </td>
       <td>
         <% unless is_empty_cart? %>
-          <%= link_to "#", class: "btn btn-success" do %>
+          <%= link_to new_order_path, class: "btn btn-success" do %>
             <%= t ".checkout" %>&nbsp;<i class="glyphicon glyphicon-arrow-right"></i>
           <% end %>
         <% end %>

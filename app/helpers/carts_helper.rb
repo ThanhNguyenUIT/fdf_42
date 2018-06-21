@@ -5,6 +5,10 @@ module CartsHelper
     @cart = session[:cart] ||= {}
   end
 
+  def reset_cart
+    session[:cart] = {}
+  end
+
   def is_empty_cart?
     session[:cart].blank?
   end

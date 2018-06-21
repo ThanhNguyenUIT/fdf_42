@@ -51,6 +51,40 @@ en:
   categories:
     show:
       couldnt_found: "Category not exist!"
+  orders:
+    new:
+      back_to_cart: "Back to cart"
+      checkout: "Checkout"
+    create:
+      order_successful: "Order successful!"
+      order_failed: "Error occurs! Order failed!"
+      empty_cart: "Your cart is empty, please select at least 1 product for order."
+    form:
+      receiver: "Receiver"
+      phone: "Phone"
+      address: "Address"
+      submit: "CONFIRM ORDER"
+  order_mailer:
+    order_successful:
+      dear: "Dear %{user},"
+      info_bill: "This is your order details informataion"
+      message: "We are a Food and Drink Shop and this email notifies you:"
+      subject: "Your order has been successful"
+      customer_info: "CUSTOMER INFORMATION"
+      name: "Name: "
+      address: "Address: "
+      call: "Call: "
+      payment_details: "PAYMENT DETAILS"
+      bill_amount: "Bill Amount: "
+      purchase_date: "Purchase Date: "
+      no_number: "No."
+      items: "Items"
+      quantity: "Quantity"
+      unit_price: "Unit Price"
+      sub_total: "Sub Total"
+  date:
+    format:
+      date_time: "%d/%m/%Y %H:%M"
   max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
   password_resets:
     couldnt_found: "Couldn't found User with Email: %{email}"
@@ -191,7 +225,7 @@ your password will stay as it is."
     new:
       signup: "Sign up"
       this_will_be_signup: "This will be a signup page for new users."
-      please_log_in: "Please log in."
+      please_log_in: "Please log in before order"
       check_email: "Please check your email to activate your account."
     user:
       delete: "delete"

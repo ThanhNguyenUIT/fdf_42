@@ -1,0 +1,25 @@
+<%= t ".dear", user: @user.name %>
+<%= t ".message" %>
+
+<%= t ".customer_info" %>
+<%= t ".name" %> <%= @order.receiver %>
+<%= t ".address" %> <%= @order.address %>
+<%= t ".call" %> <%= @order.phone %>
+
+<%= t ".payment_details" %>
+<%= t ".bill_amount" %> <%= number_to_currency @order.price %>
+<%= t ".purchase_date" %> <%= l @order.created_at, format: t("date.format.date_time") %>
+
+<%= t ".no_number" %>
+<%= t ".items" %>
+<%= t ".quantity" %>
+<%= t ".unit_price" %>
+<%= t ".sub_total" %>
+
+<% @order.order_details.each do |order_detail| %>
+  <%= order_detail.id %>
+  <%= order_detail.product_id %>
+  <%= order_detail.quantity %>
+  <%= number_to_currency order_detail.unit_price %>
+  <%= number_to_currency order_detail.total_price %>
+<% end %>

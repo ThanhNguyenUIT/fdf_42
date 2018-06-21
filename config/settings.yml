@@ -21,3 +21,5 @@ remember_me:
 quantity:
   zero: 0
   one: 1
+development:
+  host: "localhost:3000"
