@@ -13,6 +13,15 @@ en:
     activation: "Account activation"
   carts:
     couldnt_found: "Cart not exist"
+    index:
+      product: "Product"
+      price: "Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      continue: "Continue Shopping"
+      total: "Total"
+      checkout: "Checkout"
+      delete: "Delete"
   layouts:
     header:
       account: "Account %{bold_tag}"
