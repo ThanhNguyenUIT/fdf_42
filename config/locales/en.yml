@@ -52,6 +52,27 @@ en:
     show:
       couldnt_found: "Category not exist!"
   orders:
+    index:
+      my_orders: "My Orders"
+      order_history: "Order History"
+    show:
+      couldnt_found: "Order does not exist"
+      order_detail: "Order Detail"
+      customer_info: "Customer Informataion"
+      name: "Name: "
+      address: "Address: "
+      call: "Call: "
+      payment_details: "Payment Details"
+      bill_amount: "Bill Amount: "
+      purchase_date: "Purchase Date: "
+      no_number: "No."
+      items: "Items"
+      quantity: "Quantity"
+      unit_price: "Unit Price"
+      sub_total: "Sub Total"
+      total_price: "Total Price"
+      my_orders: "My Orders"
+      continue: "Continue Shopping"
     new:
       back_to_cart: "Back to cart"
       checkout: "Checkout"
@@ -59,17 +80,42 @@ en:
       order_successful: "Order successful!"
       order_failed: "Error occurs! Order failed!"
       empty_cart: "Your cart is empty, please select at least 1 product for order."
+    cancel:
+      couldnt_found: "Order does not exist"
+      cant_cancel_now: "Your order can't cancel now. Please try it later!"
     form:
       receiver: "Receiver"
       phone: "Phone"
       address: "Address"
       submit: "CONFIRM ORDER"
+    order:
+      detail: "Detail"
+      cancel: "Cancel"
   order_mailer:
     order_successful:
       dear: "Dear %{user},"
       info_bill: "This is your order details informataion"
-      message: "We are a Food and Drink Shop and this email notifies you:"
+      message: "We are a Food and Drink Shop and this email notifies you that
+        your order has been successful"
       subject: "Your order has been successful"
+      customer_info: "CUSTOMER INFORMATION"
+      name: "Name: "
+      address: "Address: "
+      call: "Call: "
+      payment_details: "PAYMENT DETAILS"
+      bill_amount: "Bill Amount: "
+      purchase_date: "Purchase Date: "
+      no_number: "No."
+      items: "Items"
+      quantity: "Quantity"
+      unit_price: "Unit Price"
+      sub_total: "Sub Total"
+    cancel_order:
+      dear: "Dear %{user},"
+      info_bill: "This is your order details informataion"
+      message: "We are a Food and Drink Shop and this email notifies you that
+        your order has been cancelled"
+      subject: "Your order has been cancelled"
       customer_info: "CUSTOMER INFORMATION"
       name: "Name: "
       address: "Address: "

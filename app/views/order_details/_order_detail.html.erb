@@ -1,6 +1,6 @@
 <tr>
   <td><%= order_detail.id %></td>
-  <td><%= order_detail.product_id %></td>
+  <td><%= order_detail.product.name %></td>
   <td><%= order_detail.quantity %></td>
   <td><%= number_to_currency order_detail.unit_price %></td>
   <td><%= number_to_currency order_detail.total_price %></td>
