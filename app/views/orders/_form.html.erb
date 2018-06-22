@@ -1,0 +1,18 @@
+<%= form_for @order do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <%= f.hidden_field :price, value: sum_total_price %>
+
+  <%= f.label :receiver, t(".receiver") %>
+  <%= f.text_field :receiver, value: current_user.name, class: "form-control" %>
+
+  <%= f.label :address, t(".address") %>
+  <%= f.text_field :address, value: current_user.address, class: "form-control" %>
+
+  <%= f.label :phone, t(".phone") %>
+  <%= f.text_field :phone, value: current_user.phone, class: "form-control" %>
+
+  <%= f.submit t(".submit"), class: "btn btn-primary" %>
+<% end %>

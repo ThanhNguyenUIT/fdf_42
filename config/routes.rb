@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :products, only: %i(index show)
   resources :categories, only: :show
   resources :carts, only: :index
+  resources :orders, only: %i(new create)
 
   get "add_cart/:product_id", to: "carts#add_cart", as: :add_cart
   get "remove_cart/:product_id", to: "carts#remove_cart", as: :remove_cart
