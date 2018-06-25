@@ -16,10 +16,4 @@
 <%= t ".unit_price" %>
 <%= t ".sub_total" %>
 
-<% @order.order_details.each do |order_detail| %>
-  <%= order_detail.id %>
-  <%= order_detail.product.name %>
-  <%= order_detail.quantity %>
-  <%= number_to_currency order_detail.unit_price %>
-  <%= number_to_currency order_detail.total_price %>
-<% end %>
+<% render partial: "order_detail_text", collection: @order.order_details, as: :order_detail %>

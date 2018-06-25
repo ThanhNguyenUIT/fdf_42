@@ -23,3 +23,6 @@ quantity:
   one: 1
 development:
   host: "localhost:3000"
+paginate:
+  order:
+    per_page: 5

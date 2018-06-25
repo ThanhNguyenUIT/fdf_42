@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   resources :products, only: %i(index show)
   resources :categories, only: :show
   resources :carts, only: :index
-  resources :orders, only: %i(new create)
+  resources :orders, only: %i(index new create show)
 
   get "add_cart/:product_id", to: "carts#add_cart", as: :add_cart
   get "remove_cart/:product_id", to: "carts#remove_cart", as: :remove_cart
   post "update_subtotal/", to: "carts#update_subtotal", as: :update_subtotal
+  put "cancel/:id", to: "orders#cancel", as: :cancel
 end

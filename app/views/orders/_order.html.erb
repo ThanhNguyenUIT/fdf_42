@@ -1,0 +1,20 @@
+<tr>
+  <td><%= order_counter + Settings.quantity.one %></td>
+  <td><%= order.receiver %></td>
+  <td><%= order.address %></td>
+  <td><%= order.phone %></td>
+  <td><%= l order.created_at, format: t("date.format.date_time") %></td>
+  <td><%= order.status %></td>
+  <td><%= number_to_currency order.price %></td>
+  <td>
+    <%= link_to order, class: "btn btn-primary" do %>
+      <i class="glyphicon glyphicon-zoom-in"></i>&nbsp;<%= t ".detail" %>
+    <% end %>
+    <% if order.processing? %>
+      <%= link_to cancel_path(order.id), remote: true, method: :put,
+        class: "btn btn-danger" do %>
+        <i class="glyphicon glyphicon-trash"></i>&nbsp;<%= t ".cancel" %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>
