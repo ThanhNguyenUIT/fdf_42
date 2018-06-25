@@ -26,3 +26,5 @@ development:
 paginate:
   order:
     per_page: 5
+  product:
+    per_page: 20

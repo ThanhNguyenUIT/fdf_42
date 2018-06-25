@@ -12,4 +12,16 @@ class OrderMailer < ApplicationMailer
     @order = order
     mail to: @user.email, subject: t(".subject")
   end
+
+  def approve_order order
+    @order = order
+    @user = @order.user
+    mail to: @user.email, subject: t(".subject")
+  end
+
+  def reject_order order
+    @order = order
+    @user = @order.user
+    mail to: @user.email, subject: t(".subject")
+  end
 end

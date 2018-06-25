@@ -1,0 +1,21 @@
+<%= form_for [:admin, @product] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :category_id, t(".categories") %>
+  <%= f.collection_select :category_id, @categories, :id, :name, {},
+    class: "form-control" %>
+
+  <%= f.label :name, t(".name") %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :information, t(".information") %>
+  <%= f.text_area :information %>
+
+  <%= f.label :price, t(".price") %>
+  <%= f.text_field :price, class: "form-control" %>
+
+  <%= f.label :quantity, t(".quantity") %>
+  <%= f.text_field :quantity, class: "form-control" %>
+
+  <%= f.submit t(".submit"), class: "btn btn-primary" %>
+<% end %>
