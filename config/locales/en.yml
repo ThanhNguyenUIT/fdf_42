@@ -1,4 +1,41 @@
 en:
+  admin:
+    products:
+      product:
+        edit: "Edit"
+        delete: "Delete"
+      form:
+        categories: "Categories"
+        name: "Name"
+        information: "Information"
+        price: "Price"
+        quantity: "Quantity"
+        submit: "Submit"
+      index:
+        create: "Create"
+        products: "List of product"
+        id: "Id"
+        name: "Name"
+        image: "Image"
+        price: "Price"
+        quantity: "Quantity"
+        action: "Action"
+      show:
+        couldnt_found: "Product does not exist!"
+      new:
+        create: "Create"
+      create:
+        create_success: "Product created"
+      edit:
+        couldnt_found: "Product does not exist!"
+        edit: "Edit"
+      update:
+        couldnt_found: "Product does not exist!"
+        edit_success: "Product edited"
+      destroy:
+        couldnt_found: "Product does not exist!"
+        delete_success: "Delete successful"
+        delete_failed: "Failed to delete product"
   number:
   currency:
     format:
@@ -115,6 +152,42 @@ en:
       info_bill: "This is your order details informataion"
       message: "We are a Food and Drink Shop and this email notifies you that
         your order has been cancelled"
+      subject: "Your order has been cancelled"
+      customer_info: "CUSTOMER INFORMATION"
+      name: "Name: "
+      address: "Address: "
+      call: "Call: "
+      payment_details: "PAYMENT DETAILS"
+      bill_amount: "Bill Amount: "
+      purchase_date: "Purchase Date: "
+      no_number: "No."
+      items: "Items"
+      quantity: "Quantity"
+      unit_price: "Unit Price"
+      sub_total: "Sub Total"
+    reject_order:
+      dear: "Dear %{user},"
+      info_bill: "This is your order details informataion"
+      message: "We are a Food and Drink Shop and this email notifies you that
+        your order has been rejected"
+      subject: "Your order has been cancelled"
+      customer_info: "CUSTOMER INFORMATION"
+      name: "Name: "
+      address: "Address: "
+      call: "Call: "
+      payment_details: "PAYMENT DETAILS"
+      bill_amount: "Bill Amount: "
+      purchase_date: "Purchase Date: "
+      no_number: "No."
+      items: "Items"
+      quantity: "Quantity"
+      unit_price: "Unit Price"
+      sub_total: "Sub Total"
+    approve_order:
+      dear: "Dear %{user},"
+      info_bill: "This is your order details informataion"
+      message: "We are a Food and Drink Shop and this email notifies you that
+        your order has been approved"
       subject: "Your order has been cancelled"
       customer_info: "CUSTOMER INFORMATION"
       name: "Name: "
