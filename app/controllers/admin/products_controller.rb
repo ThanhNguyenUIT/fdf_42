@@ -55,8 +55,8 @@ class Admin::ProductsController < ApplicationController
   private
 
   def load_products
-    @products = Product.by_active.order_by_desc.paginate page: params[:page],
-      per_page: Settings.paginate.product.per_page
+    @products = Product.stocking.by_active.order_by_desc
+                       .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 
   def load_product

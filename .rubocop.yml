@@ -329,6 +329,7 @@ Style/MethodDefParentheses:
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
   Max: 17
+  Enabled: false
 
 Style/MethodName:
   EnforcedStyle: snake_case

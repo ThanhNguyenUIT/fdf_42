@@ -1,5 +1,42 @@
 en:
   admin:
+    orders:
+      order:
+        approve: "Approve"
+        reject: "Reject"
+      index:
+        order_list: "Order List"
+        no_number: "No"
+        receiver: "Receiver"
+        address: "Address"
+        phone: "Phone"
+        date: "Date"
+        status: "Status"
+        total: "Total"
+        action: "Action"
+      show:
+        couldnt_found: "Order does not exist"
+        order_detail: "Order Detail"
+        customer_info: "Customer Informataion"
+        name: "Name: "
+        address: "Address: "
+        call: "Call: "
+        payment_details: "Payment Details"
+        bill_amount: "Bill Amount: "
+        purchase_date: "Purchase Date: "
+        no_number: "No."
+        items: "Items"
+        quantity: "Quantity"
+        unit_price: "Unit Price"
+        sub_total: "Sub Total"
+        total_price: "Total Price"
+        back: "Back"
+      approve:
+        not_enough: "Not enough quantity"
+        not_enough_quantity: "Quantity of product not enough for order"
+        cant_approve_now: "Can not approve order now. Please try it later!"
+      reject:
+        cant_reject_now: "Can not reject order now. Please try it later!"
     products:
       product:
         edit: "Edit"
@@ -69,6 +106,7 @@ en:
       logout: "Log out"
       profile: "Profile"
       sample_app: "Sample App"
+      my_orders: "My Orders"
       settings: "Settings"
       users: "Users"
     footer:
@@ -92,6 +130,14 @@ en:
     index:
       my_orders: "My Orders"
       order_history: "Order History"
+      no_number: "No"
+      receiver: "Receiver"
+      address: "Address"
+      phone: "Phone"
+      date: "Date"
+      status: "Status"
+      total: "Total"
+      action: "Action"
     show:
       couldnt_found: "Order does not exist"
       order_detail: "Order Detail"
@@ -169,8 +215,8 @@ en:
       dear: "Dear %{user},"
       info_bill: "This is your order details informataion"
       message: "We are a Food and Drink Shop and this email notifies you that
-        your order has been rejected"
-      subject: "Your order has been cancelled"
+        your order has been REJECTED"
+      subject: "Your order has been rejected"
       customer_info: "CUSTOMER INFORMATION"
       name: "Name: "
       address: "Address: "
@@ -187,8 +233,8 @@ en:
       dear: "Dear %{user},"
       info_bill: "This is your order details informataion"
       message: "We are a Food and Drink Shop and this email notifies you that
-        your order has been approved"
-      subject: "Your order has been cancelled"
+        your order has been APPROVED"
+      subject: "Your order has been approved"
       customer_info: "CUSTOMER INFORMATION"
       name: "Name: "
       address: "Address: "

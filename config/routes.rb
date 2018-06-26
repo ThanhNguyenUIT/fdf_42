@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   resources :orders, only: %i(index new create show)
   namespace :admin do
     resources :products
+    resources :orders, only: %i(index show)
+
+    put "approve/:id", to: "orders#approve", as: :approve
+    put "reject/:id", to: "orders#reject", as: :reject
   end
 
   get "add_cart/:product_id", to: "carts#add_cart", as: :add_cart
