@@ -10,7 +10,7 @@ class Order < ApplicationRecord
   validates :receiver, presence: true, length: {maximum: Settings.name.length.maximum}
   validates :phone, :address, presence: true
 
-  scope :order_by_desc, ->{order(created_at: :desc)}
+  scope :newest, ->{order created_at: :desc}
   scope :by_product_id, ->(product_id) do
     joins(:order_details).where("order_details.product_id = ?", product_id)
   end

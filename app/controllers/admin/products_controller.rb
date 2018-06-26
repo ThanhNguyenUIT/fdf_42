@@ -55,7 +55,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def load_products
-    @products = Product.stocking.by_active.order_by_desc
+    @products = Product.stocking.by_active.newest
                        .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 
@@ -71,6 +71,6 @@ class Admin::ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit :category_id, :name, :description, :price, :quantity
+    params.require(:product).permit :category_id, :name, :information, :price, :quantity
   end
 end
