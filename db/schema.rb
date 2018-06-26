@@ -1,8 +1,9 @@
-ActiveRecord::Schema.define(version: 2018_06_25_081957) do
+ActiveRecord::Schema.define(version: 2018_06_26_100525) do
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "active", default: true
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

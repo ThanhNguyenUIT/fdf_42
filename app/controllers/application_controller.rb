@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include CartsHelper
 
-  before_action :load_categories, :load_cart
+  before_action :load_categories_header, :load_cart
 
   private
 
-  def load_categories
+  def load_categories_header
     @categories = Category.all
   end
 

@@ -1,5 +1,37 @@
 en:
   admin:
+    categories:
+      form:
+        name: "Name"
+        submit: "Submit"
+      category_detail:
+        create: "Create"
+        edit: "Edit"
+        delete: "Delete"
+      index:
+        create: "Create"
+        category_list: "Category List"
+        id: "Id"
+        name: "Name"
+        action: "Action"
+      show:
+        couldnt_found: "Category does not exist!"
+      new:
+        create: "Create"
+      create:
+        create_success: "Category created"
+      edit:
+        couldnt_found: "Category does not exist!"
+        edit: "Edit"
+      update:
+        couldnt_found: "Category does not exist!"
+        edit_success: "Category edited"
+      destroy:
+        couldnt_found: "Category does not exist!"
+        delete_success: "Delete Category successful"
+        delete_failed: "Failed to delete category!"
+      load_category:
+        couldnt_found: "Category does not exist!"
     orders:
       order:
         approve: "Approve"
@@ -37,6 +69,8 @@ en:
         cant_approve_now: "Can not approve order now. Please try it later!"
       reject:
         cant_reject_now: "Can not reject order now. Please try it later!"
+      load_order:
+        couldnt_found: "Order does not exist!"
     products:
       product:
         edit: "Edit"
@@ -71,8 +105,10 @@ en:
         edit_success: "Product edited"
       destroy:
         couldnt_found: "Product does not exist!"
-        delete_success: "Delete successful"
-        delete_failed: "Failed to delete product"
+        delete_success: "Delete product successful"
+        delete_failed: "Failed to delete product!"
+      load_product:
+        couldnt_found: "Product does not exist!"
   number:
   currency:
     format:

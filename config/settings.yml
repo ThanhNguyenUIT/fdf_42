@@ -4,6 +4,9 @@ name:
 email:
   length:
     maximum: 255
+information:
+  length:
+    maximum: 1000
 gravatar:
   size:
     default: 80
@@ -28,6 +31,8 @@ paginate:
     per_page: 5
   product:
     per_page: 20
+  category:
+    per_page: 5
 number:
   one: 1
   zero: 0

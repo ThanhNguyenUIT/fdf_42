@@ -74,7 +74,7 @@ class OrdersController < ApplicationController
   end
 
   def load_orders
-    @orders = current_user.orders.order_by_desc
+    @orders = current_user.orders.newest
                           .paginate page: params[:page], per_page: Settings.paginate.order.per_page
   end
 end

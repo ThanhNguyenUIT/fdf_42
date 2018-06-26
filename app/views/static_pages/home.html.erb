@@ -4,8 +4,10 @@
     <div class="center jumbotron">
       <h1><%= t ".welcome" %></h1>
     </div>
+    <%= will_paginate @products %>
     <div id="products">
       <%= render @products %>
     </div>
   </div>
+  <%= will_paginate @products %>
 </div>

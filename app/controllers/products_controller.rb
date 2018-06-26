@@ -2,7 +2,7 @@
 
 class ProductsController < ApplicationController
   def index
-    @products = Product.by_active.stocking.order_by_desc
+    @products = Product.by_active.stocking.newest
                        .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 

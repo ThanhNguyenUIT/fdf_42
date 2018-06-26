@@ -1,0 +1,21 @@
+<% provide :title, t(".category_list") %>
+<h1><%= t ".category_list" %></h1>
+<div class="add-category">
+  <%= link_to new_admin_category_path, class: "btn btn-success pull-right" do %>
+    <i class="glyphicon glyphicon-plus"></i> <%= t ".create" %>
+  <% end %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><%= t ".id" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+      <%= render partial: "category_detail", collection: @categories, as: :category %>
+  </tbody>
+  <%= will_paginate %>
+</table>
+

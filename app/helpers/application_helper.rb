@@ -20,9 +20,9 @@ module ApplicationHelper
 
   def couter_page_list page, per
     if page.blank?
-      return Settings.number.one
+      Settings.number.one
     else
-      return (page.to_i - Settings.number.one) * per + Settings.number.one
+      (page.to_i - Settings.number.one) * per + Settings.number.one
     end
   end
 end

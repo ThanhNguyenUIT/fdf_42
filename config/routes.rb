@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
     resources :orders, only: %i(index show)
+    resources :categories
 
     put "approve/:id", to: "orders#approve", as: :approve
     put "reject/:id", to: "orders#reject", as: :reject
