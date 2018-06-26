@@ -1,21 +1,19 @@
-<p><%= t ".dear", user: @user.name %></p>
-<p><%= t ".message" %></p>
-<hr/>
-<h3><%= t ".info_bill" %></h3>
+<%= provide :title, t(".order_detail") %>
+<h1><%= t ".order_detail" %></h1>
 <div class="container">
   <div class="row pad-top-botm client-info">
     <div class="col-lg-6 col-md-6 col-sm-6">
       <h4><strong><%= t ".customer_info" %></strong></h4>
       <strong><%= t ".name" %></strong><%= @order.receiver %>
-      <br />
+      <br>
       <b><%= t ".address" %></b><%= @order.address %>
-      <br />
+      <br>
       <b><%= t ".call" %></b><%= @order.phone %>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6">
       <h4><strong><%= t ".payment_details" %></strong></h4>
       <b><%= t ".bill_amount" %></b> <%= number_to_currency @order.price %>
-      <br />
+      <br>
       <b><%= t ".purchase_date" %></b>
       <%= l @order.created_at, format: t("date.format.date_time") %>
     </div>
@@ -35,8 +33,19 @@
           <tbody>
             <%= render @order.order_details %>
           </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3"><%=  t ".total_price" %></th>
+              <th><%= number_to_currency @order.price %></th>
+            </tr>
+          </tfoot>
         </table>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div><%= link_to t(".back"), admin_orders_path, class: "btn btn-primary pull-left" %></div>
     </div>
   </div>
 </div>

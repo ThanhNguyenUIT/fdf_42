@@ -13,4 +13,16 @@ module ApplicationHelper
   def show_product_image product
     image_tag product.images.first.link, alt: product.name if product.images.present?
   end
+
+  def index_count_page counter, page, max_per
+    counter + couter_page_list(page, max_per)
+  end
+
+  def couter_page_list page, per
+    if page.blank?
+      return Settings.number.one
+    else
+      return (page.to_i - Settings.number.one) * per + Settings.number.one
+    end
+  end
 end

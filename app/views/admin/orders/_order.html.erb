@@ -7,13 +7,17 @@
   <td><%= order.status %></td>
   <td><%= number_to_currency order.price %></td>
   <td>
-    <%= link_to order, class: "btn btn-primary" do %>
+    <%= link_to admin_order_path(order), class: "btn btn-primary" do %>
       <i class="glyphicon glyphicon-zoom-in"></i>&nbsp;<%= t ".detail" %>
     <% end %>
     <% if order.processing? %>
-      <%= link_to cancel_path(order.id), remote: true, method: :put,
+      <%= link_to admin_approve_path(order.id), remote: true, method: :put,
+        class: "btn btn-success" do %>
+        <i class="glyphicon glyphicon-ok"></i>&nbsp;<%= t ".approve" %>
+      <% end %>
+      <%= link_to admin_reject_path(order.id), remote: true, method: :put,
         class: "btn btn-danger" do %>
-        <i class="glyphicon glyphicon-trash"></i>&nbsp;<%= t ".cancel" %>
+        <i class="glyphicon glyphicon-remove"></i>&nbsp;<%= t ".reject" %>
       <% end %>
     <% end %>
   </td>

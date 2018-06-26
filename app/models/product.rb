@@ -11,6 +11,6 @@ class Product < ApplicationRecord
 
   scope :by_active, ->{where active: true}
   scope :order_by_desc, ->{order(created_at: :desc)}
-  scope :load_product, ->{where "quantity > ?", Settings.quantity.zero}
+  scope :stocking, ->{where "quantity > ?", Settings.quantity.zero}
   scope :load_product_by_ids, ->(product_ids){where id: product_ids}
 end

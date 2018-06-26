@@ -2,7 +2,7 @@
 
 class StaticPagesController < ApplicationController
   def home
-    @products = Product.load_product
+    @products = Product.stocking.by_active.order_by_desc
   end
 
   def help; end

@@ -28,3 +28,6 @@ paginate:
     per_page: 5
   product:
     per_page: 20
+number:
+  one: 1
+  zero: 0

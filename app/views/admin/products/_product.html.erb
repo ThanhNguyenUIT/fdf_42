@@ -2,7 +2,7 @@
   <td><%= product.id %></td>
   <td><%= product.name %></td>
   <td><%= show_product_image product %></td>
-  <td><%= product.price %></td>
+  <td><%= number_to_currency product.price %></td>
   <td><%= product.quantity %></td>
   <td>
     <%= link_to edit_admin_product_path(product), class: "btn btn-info" do %>
