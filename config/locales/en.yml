@@ -141,6 +141,12 @@ en:
       delete: "Delete"
   layouts:
     header:
+      alphabet: "Alphabet"
+      price: "Price"
+      a_z: "A-Z"
+      z_a: "Z-A"
+      lowest_to_highest: "Lowest to Highest"
+      highest_to_lowest: "Highest to Lowest"
       account: "Account %{bold_tag}"
       category: "Category"
       help: "Help"

@@ -17,4 +17,6 @@ class Product < ApplicationRecord
   scope :newest, ->{order created_at: :desc}
   scope :stocking, ->{where "quantity > ?", Settings.quantity.zero}
   scope :load_product_by_ids, ->(product_ids){where id: product_ids}
+  scope :by_alphabet, ->(order){order name: order}
+  scope :by_price, ->(order){order price: order}
 end
