@@ -37,3 +37,6 @@ paginate:
 number:
   one: 1
   zero: 0
+filter:
+  alphabet: "alphabet"
+  price: "price"
