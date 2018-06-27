@@ -6,6 +6,7 @@
     <div class="card_image">
       <%= show_product_image product %>
     </div>
+    <p><%= truncate product.information, length: Settings.information.length.minimize %></p>
     <div class="card_text">
       <p><small><%= t ".price" %></small> <%= number_to_currency product.price %></p>
     </div>

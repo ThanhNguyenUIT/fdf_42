@@ -10,18 +10,13 @@ class Admin::OrdersController < ApplicationController
 
   def approve
     ActiveRecord::Base.transaction do
-      if @order.ordered!
-        @order.order_details.each do |order_detail|
-          raise t(".not_enough") if order_detail.product.quantity < order_detail.quantity
-          decrement_product_quantity order_detail.product, order_detail.quantity
-        end
-        OrderMailer.approve_order(@order).deliver_now
-        respond_to do |format|
-          format.html{render "orders/index"}
-          format.json {}
-          format.js
-        end
+      @order.ordered!
+      @order.order_details.find_each do |order_detail|
+        raise t(".not_enough") if order_detail.product.quantity < order_detail.quantity
+        decrement_product_quantity order_detail.product, order_detail.quantity
       end
+      OrderMailer.approve_order(@order).deliver_now
+      respond_to_format
     end
   rescue StandardError => e
     flash[:danger] = t ".cant_approve_now"
@@ -31,14 +26,9 @@ class Admin::OrdersController < ApplicationController
 
   def reject
     ActiveRecord::Base.transaction do
-      if @order.rejected!
-        OrderMailer.reject_order(@order).deliver_now
-        respond_to do |format|
-          format.html{render "orders/index"}
-          format.json {}
-          format.js
-        end
-      end
+      @order.rejected!
+      OrderMailer.reject_order(@order).deliver_now
+      respond_to_format
     end
   rescue StandardError
     flash[:danger] = t ".cant_reject_now"
@@ -61,5 +51,13 @@ class Admin::OrdersController < ApplicationController
 
   def decrement_product_quantity product, quantity
     product.update quantity: product.quantity - quantity
+  end
+
+  def respond_to_format
+    respond_to do |format|
+      format.html{render "orders/index"}
+      format.json {}
+      format.js
+    end
   end
 end
