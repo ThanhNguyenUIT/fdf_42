@@ -13,7 +13,7 @@
         </li>
         <li>
           <%= link_to content_tag(:span, show_badge(session[:cart].size), class: "glyphicon glyphicon-shopping-cart").html_safe,
-            is_empty_cart? ? "#" : carts_path %>
+            is_empty_cart? ? "#" : carts_path, id: "cart_nav" %>
         </li>
         <% if logged_in? %>
           <li class="dropdown">

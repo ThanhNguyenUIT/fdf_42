@@ -1,1 +1,2 @@
 $('.item_count').html('<%= session[:cart].size %>');
+$('#cart_nav').attr('href', '<%= carts_path %>')

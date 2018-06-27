@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :carts, only: :index
   resources :orders, only: %i(index new create show)
   namespace :admin do
+    root "static_pages#home"
+
     resources :products
     resources :orders, only: %i(index show)
     resources :categories
