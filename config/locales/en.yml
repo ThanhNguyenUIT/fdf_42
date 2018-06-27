@@ -37,6 +37,7 @@ en:
         approve: "Approve"
         reject: "Reject"
       index:
+        not_have_privilege: "You not have privilege to access admin pages"
         order_list: "Order List"
         no_number: "No"
         receiver: "Receiver"
@@ -109,14 +110,20 @@ en:
         delete_failed: "Failed to delete product!"
       load_product:
         couldnt_found: "Product does not exist!"
+    static_pages:
+      home:
+        not_have_privilege: "You not have privilege to access admin pages"
+        order_managerment: "Order Management"
+        product_managerment: "Product Management"
+        category_managerment: "Category Management"
   number:
-  currency:
-    format:
-      unit: "$"
-      delimiter: ","
-      separator: "."
-      precision: 3
-      format: "%n%u"
+    currency:
+      format:
+        unit: "$"
+        delimiter: ","
+        separator: "."
+        precision: 2
+        format: "%n%u"
   account_activations:
     activated: "Account activated!"
     invalid_link: "Invalid activation link"
@@ -426,7 +433,7 @@ your password will stay as it is."
     new:
       signup: "Sign up"
       this_will_be_signup: "This will be a signup page for new users."
-      please_log_in: "Please log in before order"
+      please_log_in: "Please log in before continue..."
       check_email: "Please check your email to activate your account."
     user:
       delete: "delete"

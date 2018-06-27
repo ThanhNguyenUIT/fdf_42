@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::OrdersController < ApplicationController
+class Admin::OrdersController < AdminController
   before_action :load_order, only: %i(show approve reject)
   before_action :load_orders, only: %i(index approve reject)
 

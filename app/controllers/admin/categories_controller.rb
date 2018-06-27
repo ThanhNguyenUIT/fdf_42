@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminController
   before_action :load_categories, only: :index
   before_action :load_category, except: %i(index new create)
   before_action :load_products, only: :destroy
