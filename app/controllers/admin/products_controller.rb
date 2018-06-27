@@ -37,15 +37,14 @@ class Admin::ProductsController < ApplicationController
   def destroy
     ActiveRecord::Base.transaction do
       if @orders.present?
-        @orders.each do |order|
+        @orders.find_each do |order|
           order.rejected!
           OrderMailer.reject_order(order).deliver_now
         end
       end
-      if @product.update active: false
-        flash[:success] = t ".delete_success"
-        redirect_to admin_products_path
-      end
+      @product.update! active: false
+      flash[:success] = t ".delete_success"
+      redirect_to admin_products_path
     end
   rescue StandardError
     flash[:danger] = t ".delete_failed"

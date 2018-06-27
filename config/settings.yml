@@ -7,6 +7,7 @@ email:
 information:
   length:
     maximum: 1000
+    minimize: 80
 gravatar:
   size:
     default: 80

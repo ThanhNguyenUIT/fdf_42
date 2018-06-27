@@ -3,6 +3,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :load_categories, only: :index
   before_action :load_category, except: %i(index new create)
+  before_action :load_products, only: :destroy
 
   def index; end
 
@@ -34,11 +35,14 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    if @category.update active: false
+    ActiveRecord::Base.transaction do
+      deactive_products @products if @products.present?
+      @category.update! active: false
       flash[:success] = t ".delete_success"
-    else
-      flash[:danger] = t ".delete_failed"
+      redirect_to admin_categories_path
     end
+  rescue StandardError
+    flash[:danger] = t ".delete_failed"
     redirect_to admin_categories_path
   end
 
@@ -54,6 +58,26 @@ class Admin::CategoriesController < ApplicationController
     return if @category
     flash[:danger] = t ".couldnt_found"
     redirect_to root_path
+  end
+
+  def load_products
+    @products = @category.products
+  end
+
+  def deactive_products products
+    products.find_each do |product|
+      product.update! active: false
+      reject_orders_by_product product
+    end
+  end
+
+  def reject_orders_by_product product
+    orders = Order.by_product_id(product.id).in_processing
+    return if orders.blank?
+    orders.find_each do |order|
+      order.rejected!
+      OrderMailer.reject_order(order).deliver_now
+    end
   end
 
   def category_params

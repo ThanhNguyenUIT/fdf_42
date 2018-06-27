@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   private
 
   def load_categories_header
-    @categories = Category.all
+    @categories = Category.by_active
   end
 
   def load_cart
