@@ -4,6 +4,11 @@
     <div class="center jumbotron">
       <h1><%= t ".welcome" %></h1>
     </div>
+    <div class="col-md-12">
+      <div class="col-md-6 pull-right">
+        <%= render "static_pages/filter_form" %>
+      </div>
+    </div>
     <div id="paginate"><%= will_paginate @products %></div>
     <div id="products"><%= render @products %></div>
   </div>

@@ -1,0 +1,7 @@
+<%= form_tag category_path(@category), method: :get, class: "form-inline" do %>
+  <%= select_tag :filter, options_for_select([[t(".alphabet"), :alphabet], [t(".price"), :price]]),
+    class: "form-control col-md-2 col-md-offset-5" %>
+  <%= select_tag :order, options_for_select([[t(".asc"), :asc], [t(".desc"), :desc]]),
+    class: "form-control col-md-2" %>
+  <%= submit_tag t(".filter"), name: nil, class: "btn btn-primary col-md-2" %>
+<% end %>

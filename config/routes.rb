@@ -30,5 +30,5 @@ Rails.application.routes.draw do
   get "remove_cart/:product_id", to: "carts#remove_cart", as: :remove_cart
   post "update_subtotal/", to: "carts#update_subtotal", as: :update_subtotal
   put "cancel/:id", to: "orders#cancel", as: :cancel
-  get "filter/:filter/:order", to: "products#filter", as: :filter
+  get "filter/", to: "products#filter", as: :filter
 end

@@ -13,13 +13,8 @@ class ProductsController < ApplicationController
   end
 
   def filter
-    @products = Product.by_active.stocking
-    @products = case params[:filter]
-    when Settings.filter.alphabet
-       @products.by_alphabet(params[:order])
-    when Settings.filter.price
-      @products.by_price(params[:order])
-    end.paginate page: params[:page], per_page: Settings.paginate.product.per_page
+    @products = Product.by_active.stocking.filter(params[:filter], params[:order])
+                       .paginate page: params[:page], per_page: Settings.paginate.product.per_page
     respond_to_format
   end
 
