@@ -1,6 +1,11 @@
 <h1 class="jumbotron"><%= full_title @category.name %></h1>
 <div class="container">
   <div class="row">
-    <%= render @products %>
+    <div class="col-md-12">
+      <div class="col-md-6 pull-right">
+        <%= render "categories/filter_form" %>
+      </div>
+    </div>
+    <div><%= render @products %></div>
   </div>
 </div>

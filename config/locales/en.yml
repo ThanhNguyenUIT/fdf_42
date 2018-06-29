@@ -175,6 +175,12 @@ en:
   categories:
     show:
       couldnt_found: "Category not exist!"
+    filter_form:
+      alphabet: "Alphabet"
+      price: "Price"
+      asc: "ASC"
+      desc: "DESC"
+      filter: "Filter"
   orders:
     index:
       my_orders: "My Orders"
@@ -322,6 +328,7 @@ en:
   products:
     product:
       add_cart: "Add to card"
+      view_product: "View Product"
     index:
       welcome: "Welcome to Food and Drink Store!"
     show:
@@ -363,6 +370,12 @@ en:
     user_info:
       view_my_profile : "view my profile"
   static_pages:
+    filter_form:
+      alphabet: "Alphabet"
+      price: "Price"
+      asc: "ASC"
+      desc: "DESC"
+      filter: "Filter"
     home:
       welcome: "Welcome to the Food And Drink Store!"
       ruby_on_rails: "Ruby on Rails"
