@@ -7,19 +7,16 @@ User.create!(
   address: "Linh Trung, Thu Duc",
   city: "Ho Chi Minh City",
   phone: "01686329452",
-  activated: true,
-  activated_at: Time.zone.now)
+  confirmed_at: Time.zone.now)
 User.create!(
   name: "User1",
   email: "user1@gmail.com",
   password: "foobar",
   password_confirmation: "foobar",
-  admin: false,
   address: "Dong Da, Ba Dinh",
   city: "Ha Noi City",
   phone: "0123456789",
-  activated: true,
-  activated_at: Time.zone.now)
+  confirmed_at: Time.zone.now)
 5.times do
   Category.create!(name: Faker::Name.name)
 end

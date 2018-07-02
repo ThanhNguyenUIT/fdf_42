@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :information
       t.integer :quantity
       t.references :category, foreign_key: true
+      t.boolean :active, default: true
       t.timestamps
     end
   end
