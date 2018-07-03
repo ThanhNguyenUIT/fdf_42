@@ -56,9 +56,9 @@ class UsersController < ApplicationController
   end
 
   def load_user
-    return if (@user = User.find_by id: params[:id])
+    return if (@user = current_user)
     flash[:danger] = t "shared.error_messages.couldnt_found"
-    redirect_to users_path
+    redirect_to root_path
   end
 
   def user_params

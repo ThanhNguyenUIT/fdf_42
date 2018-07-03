@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
   include CartsHelper
 
   before_action :load_categories_header, :load_cart
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit :sign_up, keys: %i(name phone address city)
+  end
 
   private
 
@@ -14,13 +21,6 @@ class ApplicationController < ActionController::Base
 
   def load_cart
     set_cart
-  end
-
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t "users.new.please_log_in"
-    redirect_to login_path
   end
 
   def load_products_in_cart

@@ -48,6 +48,19 @@ en:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      new:
+        email: "Email"
+        password: "Password"
+        login: "Log in"
+        remember_me: "Remember me on this computer"
+    shared:
+      links:
+        login: "Log in"
+        sign_up: "Sign up"
+        forgot: "Forgot your password?"
+        didnt_receive_confirm: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with #{OmniAuth::Utils.camelize(%{provider})}"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."

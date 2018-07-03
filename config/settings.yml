@@ -40,3 +40,8 @@ number:
 filter:
   alphabet: "alphabet"
   price: "price"
+sessions: "sessions"
+registrations: "registrations"
+passwords: "passwords"
+confirmations: "confirmations"
+unlocks: "unlocks"
