@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :suggests, dependent: :destroy
+
+  scope :activated, ->{where.not confirmed_at: nil}
 end

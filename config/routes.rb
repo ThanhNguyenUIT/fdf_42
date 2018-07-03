@@ -4,15 +4,12 @@ Rails.application.routes.draw do
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
-  get "/signup", to: "users#new"
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
   resources :products, only: %i(index show)
   resources :categories, only: :show
   resources :carts, only: :index
   resources :orders, only: %i(index new create show)
   devise_for :users
+  resources :users, only: :show
   namespace :admin do
     root "static_pages#home"
 
