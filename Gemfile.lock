@@ -100,6 +100,15 @@ GEM
       dry-validation (>= 0.10.4)
     crass (1.0.4)
     deep_merge (1.2.1)
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
+    devise_ssl_session_verifiable (3.0.4)
+      devise (> 3.2)
+      railties (>= 4.0.0)
     dry-configurable (0.7.0)
       concurrent-ruby (~> 1.0)
     dry-container (0.6.0)
@@ -197,6 +206,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
@@ -242,6 +252,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rubocop (0.54.0)
       parallel (~> 1.10)
       parser (>= 2.5)
@@ -291,6 +304,8 @@ GEM
     uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.4.0)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -317,6 +332,8 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   config
+  devise
+  devise_ssl_session_verifiable
   faker!
   figaro
   guard
