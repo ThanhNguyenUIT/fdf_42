@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class OrdersController < ApplicationController
-  before_action :logged_in_user, :load_products_in_cart, :load_quantity_in_cart, only: %i(index new create)
+  before_action :authenticate_user!, :load_products_in_cart, :load_quantity_in_cart, only: %i(index new create)
   before_action :check_cart, only: :create
   before_action :load_orders, only: %i(index cancel)
   before_action :load_order, only: %i(cancel show)
