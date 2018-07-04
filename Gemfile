@@ -26,6 +26,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "rubocop", "~> 0.54.0", require: false
 gem "devise"
 gem "devise_ssl_session_verifiable"
+gem "cancancan", "~> 2.0"
 
 group :development, :test do
   gem "sqlite3"
