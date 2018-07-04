@@ -1,0 +1,44 @@
+<% provide :title, t(".signup") %>
+<h1><%= t ".signup" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="field">
+        <%= f.label :name, t(".name") %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :email, t(".email") %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :password, t(".password") %>
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> <%= t ".characters_minimum" %></em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, t(".confirmation") %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :address, t(".address") %>
+        <%= f.text_field :address, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :city, t(".city") %>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :phone, t(".phone") %>
+        <%= f.text_field :phone, class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit t(".signup"), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
