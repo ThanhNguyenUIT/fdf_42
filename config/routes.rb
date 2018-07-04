@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :carts, only: :index
   resources :orders, only: %i(index new create show)
   devise_for :users
-  resources :users, only: :show
+  resource :user, only: :show
   namespace :admin do
     root "static_pages#home"
 
