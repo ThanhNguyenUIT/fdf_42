@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class CartsController < ApplicationController
+  authorize_resource class: false
   before_action :set_cart, :find_product, only: %i(add_cart remove_cart update_subtotal)
   before_action :load_products_in_cart, :load_quantity_in_cart, only: %i(index update_subtotal)
 

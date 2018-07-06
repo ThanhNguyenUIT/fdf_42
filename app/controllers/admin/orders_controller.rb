@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::OrdersController < AdminController
+  load_and_authorize_resource
   before_action :load_order, only: %i(show approve reject)
   before_action :load_orders, only: %i(index approve reject)
 

@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
   before_action :load_categories_header, :load_cart
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  rescue_from CanCan::AccessDenied do
+    flash[:danger] = t "application.not_have_privilege"
+    redirect_to root_path
+  end
+
   protected
 
   def configure_permitted_parameters
@@ -32,5 +37,12 @@ class ApplicationController < ActionController::Base
     @products_in_cart.each do |product|
       product.quantity_in_cart = session[:cart][product.id.to_s]
     end
+  end
+
+  def current_ability
+    controller_name_segments = params[:controller].split("/")
+    controller_name_segments.pop
+    controller_namespace = controller_name_segments.join("/").camelize
+    Ability.new current_user, controller_namespace
   end
 end

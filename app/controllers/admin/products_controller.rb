@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::ProductsController < AdminController
+  load_and_authorize_resource
   before_action :load_products, only: :index
   before_action :load_product, except: %i(index new create)
   before_action :load_orders_in_processing, only: :destroy
