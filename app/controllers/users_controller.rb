@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
+  before_action :authenticate_user!, :load_user, only: :show
+  load_and_authorize_resource
 
-  def show
-    redirect_to root_path unless @user.confirmed_at?
-  end
+  def show; end
 
   private
 

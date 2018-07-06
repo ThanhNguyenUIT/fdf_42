@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
+  load_and_authorize_resource
   before_action :load_products, only: %i(index filter)
 
   def index; end
