@@ -1,7 +1,15 @@
 <h1 class="jumbotron"><%= t ".welcome" %></h1>
 <div class="container">
   <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6 pull-left">
+        <%= render "static_pages/search_form" %>
+      </div>
+      <div class="col-md-6 pull-right">
+        <%= render "static_pages/filter_form" %>
+      </div>
+    </div>
+    <div id="paginate"><%= will_paginate @products %></div>
     <%= render @products %>
-    <%= will_paginate %>
   </div>
 </div>

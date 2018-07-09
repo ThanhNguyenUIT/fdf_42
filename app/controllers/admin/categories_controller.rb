@@ -62,7 +62,7 @@ class Admin::CategoriesController < AdminController
   end
 
   def load_products
-    @products = @category.products
+    @products = @category.products.includes :images
   end
 
   def deactive_products products

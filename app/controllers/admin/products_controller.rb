@@ -55,7 +55,7 @@ class Admin::ProductsController < AdminController
   private
 
   def load_products
-    @products = Product.stocking.by_active.newest
+    @products = Product.stocking.by_active.newest.includes(:images)
                        .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 

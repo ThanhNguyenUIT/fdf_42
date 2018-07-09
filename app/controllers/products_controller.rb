@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   end
 
   def filter
-    @products = Product.by_active.stocking.filter(params[:filter], params[:order])
+    @products = Product.by_active.stocking.includes(:images).filter(params[:filter], params[:order])
                        .paginate page: params[:page], per_page: Settings.paginate.product.per_page
     respond_to_format
   end
@@ -22,8 +22,9 @@ class ProductsController < ApplicationController
   private
 
   def load_products
-    @products = Product.by_active.stocking.newest
-                       .paginate page: params[:page], per_page: Settings.paginate.product.per_page
+    @q = Product.ransack params[:q]
+    @products = @q.result.by_active.stocking.newest.includes(:images)
+                  .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 
   def respond_to_format
