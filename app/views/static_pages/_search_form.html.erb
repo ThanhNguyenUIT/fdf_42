@@ -1,0 +1,6 @@
+<%= search_form_for @q, class: "form-inline" do |f| %>
+  <%= f.text_field :name_or_information_or_price_or_quantity_cont,
+    class: "form-control col-md-3" %>
+
+  <%= f.submit t(".search"), name: nil, class: "btn btn-primary col-md-2" %>
+<% end %>

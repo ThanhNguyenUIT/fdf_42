@@ -372,6 +372,9 @@ en:
     user_info:
       view_my_profile : "view my profile"
   static_pages:
+    search_form:
+      search: "Search"
+      name: "Name"
     filter_form:
       alphabet: "Alphabet"
       price: "Price"

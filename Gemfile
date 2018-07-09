@@ -27,6 +27,7 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "devise"
 gem "devise_ssl_session_verifiable"
 gem "cancancan", "~> 2.0"
+gem "ransack", github: "activerecord-hackery/ransack"
 
 group :development, :test do
   gem "sqlite3"

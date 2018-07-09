@@ -4,8 +4,9 @@ class StaticPagesController < ApplicationController
   authorize_resource class: false
 
   def home
-    @products = Product.stocking.by_active.newest
-                       .paginate page: params[:page], per_page: Settings.paginate.product.per_page
+    @q = Product.ransack params[:q]
+    @products = @q.result.stocking.by_active.newest.includes(:images)
+                  .paginate page: params[:page], per_page: Settings.paginate.product.per_page
   end
 
   def help; end
