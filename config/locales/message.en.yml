@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Name can not be blank"
+              too_long: "Name is too long %{count}"
+            email:
+              blank: "Email can not be blank"
+              too_long: "Email is too long"
+              taken: "Email already exist"
+            password:
+              blank: "Password can not be blank"
+              too_short: "Password is too short"
+            phone:
+              blank: "Phone can not be blank"
+            address:
+              blank: "Address can not be blank"
+            city:
+              blank: "City can not be blank"

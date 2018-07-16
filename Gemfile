@@ -30,7 +30,8 @@ gem "cancancan", "~> 2.0"
 gem "ransack", github: "activerecord-hackery/ransack"
 
 group :development, :test do
-  gem "sqlite3"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -42,11 +43,9 @@ group :development do
 end
 
 group :test do
+  gem "shoulda-matchers", "~> 3.1", require: false
+  gem "database_cleaner"
   gem "rails-controller-testing"
-  gem "minitest"
-  gem "minitest-reporters"
-  gem "guard"
-  gem "guard-minitest"
   gem "capybara", ">= 2.15", "< 4.0"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
