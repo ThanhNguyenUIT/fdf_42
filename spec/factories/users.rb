@@ -9,5 +9,9 @@ FactoryBot.define do
     city {Faker::Address.city}
     password "foobar"
     password_confirmation "foobar"
+    confirmed_at Time.zone.now
+    factory :user_update do
+      current_password "foobar"
+    end
   end
 end
