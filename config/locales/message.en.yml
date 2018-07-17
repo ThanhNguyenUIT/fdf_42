@@ -5,18 +5,18 @@ en:
         user:
           attributes:
             name:
-              blank: "Name can not be blank"
-              too_long: "Name is too long %{count}"
+              blank: "can not be blank"
+              too_long: "is too long"
             email:
-              blank: "Email can not be blank"
-              too_long: "Email is too long"
-              taken: "Email already exist"
+              blank: "can not be blank"
+              too_long: "is too long"
+              taken: "already exist"
             password:
-              blank: "Password can not be blank"
-              too_short: "Password is too short"
+              blank: "can not be blank"
+              too_short: "is too short"
             phone:
-              blank: "Phone can not be blank"
+              blank: "can not be blank"
             address:
-              blank: "Address can not be blank"
+              blank: "can not be blank"
             city:
-              blank: "City can not be blank"
+              blank: "can not be blank"
