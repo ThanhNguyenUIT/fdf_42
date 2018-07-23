@@ -10,6 +10,12 @@ FactoryBot.define do
     password "foobar"
     password_confirmation "foobar"
     confirmed_at Time.zone.now
+    factory :user_invalid_email do
+      email {Faker::Name.name}
+    end
+    factory :user_not_activated do
+      confirmed_at nil
+    end
     factory :user_update do
       current_password "foobar"
     end

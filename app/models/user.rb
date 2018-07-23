@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :suggests, dependent: :destroy
 
+  validates :email, presence: true, length: {maximum: Settings.email.length.maximum}
   validates :name, presence: true, length: {maximum: Settings.name.length.maximum}
   validates :phone, :address, :city, presence: true
 

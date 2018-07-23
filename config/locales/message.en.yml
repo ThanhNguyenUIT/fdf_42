@@ -20,3 +20,15 @@ en:
               blank: "can not be blank"
             city:
               blank: "can not be blank"
+        product:
+          attributes:
+            name:
+              blank: "can not be blank"
+              too_long: "is too long"
+            information:
+              blank: "can not be blank"
+              too_long: "is too long"
+            price:
+              blank: "can not be blank"
+            quantity:
+              blank: "can not be blank"

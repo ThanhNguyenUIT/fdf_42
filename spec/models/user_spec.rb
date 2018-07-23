@@ -10,6 +10,34 @@ RSpec.describe User, type: :model do
     end
   end
 
+  context "user is invalid" do
+    let(:user_invalid_email) {FactoryBot.build :user_invalid_email}
+    it "invalid email" do
+      expect(user_invalid_email).not_to be_valid
+    end
+  end
+
+  context "when email is not valid" do
+    before {subject.email = ""}
+    it {is_expected.not_to be_valid}
+  end
+
+  context "when email is too long" do
+    before {subject.email = Faker::Internet.email(Faker::Lorem.characters(256))}
+    it {is_expected.not_to be_valid}
+  end
+
+  context "when pasword is not valid" do
+    before {subject.email = ""}
+    it {is_expected.not_to be_valid}
+  end
+
+  context "when password is too short" do
+    before {subject.email = Faker::Lorem.characters(5)}
+    it {is_expected.not_to be_valid}
+  end
+
+
   context "validates" do
     it "check the presence of name" do
       is_expected.to validate_presence_of(:name)
@@ -82,6 +110,33 @@ RSpec.describe User, type: :model do
 
     it "should correctly identify the has_many suggests" do
       is_expected.to have_many :suggests
+    end
+  end
+
+  context "columns" do
+    it {is_expected.to have_db_column(:name).of_type :string}
+    it {is_expected.to have_db_column(:phone).of_type :string}
+    it {is_expected.to have_db_column(:address).of_type :string}
+    it {is_expected.to have_db_column(:city).of_type :string}
+    it {is_expected.to have_db_column(:email).of_type :string}
+    it {is_expected.to have_db_column(:admin).of_type :boolean}
+    it {is_expected.to have_db_column(:encrypted_password).of_type :string}
+    it {is_expected.to have_db_column(:confirmation_token).of_type :string}
+    it {is_expected.to have_db_column(:reset_password_token).of_type :string}
+    it {is_expected.to have_db_column(:remember_created_at).of_type :datetime}
+  end
+
+  context "#activated" do
+    let(:user1) {FactoryBot.create :user}
+    let(:user2) {FactoryBot.create :user_not_activated}
+    let(:user3) {FactoryBot.create :user}
+
+    it "list user activated not match" do
+      expect(User.activated).not_to match_array([user1, user2, user3])
+    end
+
+    it "list user activated match" do
+      expect(User.activated).to match_array([user1, user3])
     end
   end
 end
